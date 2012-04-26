@@ -25,8 +25,13 @@ bang = (b) ->
     post "love"
 
 sysex_finished = (data) ->
-    # result = parse_raw_data data
-    outlet(0, raw_data)
+    result = parse_raw_data data
+    if result
+        for elt, i in result
+            outlet(0, [i+1, elt])
+
+parse_raw_data = (data) ->
+    data
 
 root.inlets = inlets
 root.outlets = outlets
