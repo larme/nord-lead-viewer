@@ -11,7 +11,7 @@
 		"bglocked" : 0,
 		"defrect" : [ 0.0, 44.0, 1280.0, 639.0 ],
 		"openrect" : [ 0.0, 0.0, 0.0, 0.0 ],
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
