@@ -97,7 +97,8 @@ probe_if_pkit = (raw_data) ->
 
 parse_single_patch_data = (data) ->
     l = SINGLE_PATCH_DATA_LENGTH/2
-    result = (data[i*2] + 16*data[i*2 + 1] for i in [0...l])
+    tmp = (data[i*2] + 16*data[i*2 + 1] for i in [0...l])
+    result = ((if v > 127 then v - 256 else v) for v in tmp)
     return result
 
 # parse a single percussion data at index (begin with 0)

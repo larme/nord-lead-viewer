@@ -118,13 +118,22 @@
   };
 
   parse_single_patch_data = function(data) {
-    var i, l, result;
+    var i, l, result, tmp, v;
     l = SINGLE_PATCH_DATA_LENGTH / 2;
-    result = (function() {
+    tmp = (function() {
       var _i, _results;
       _results = [];
       for (i = _i = 0; 0 <= l ? _i < l : _i > l; i = 0 <= l ? ++_i : --_i) {
         _results.push(data[i * 2] + 16 * data[i * 2 + 1]);
+      }
+      return _results;
+    })();
+    result = (function() {
+      var _i, _len, _results;
+      _results = [];
+      for (_i = 0, _len = tmp.length; _i < _len; _i++) {
+        v = tmp[_i];
+        _results.push(v > 127 ? v - 256 : v);
       }
       return _results;
     })();

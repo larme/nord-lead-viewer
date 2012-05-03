@@ -46,7 +46,7 @@ The patch is tested on Max 5 and Max 6 RT on a Mac. The application is built usi
 TODOs
 -----
 
-1. Lots of missing parameters, especially the velocity sensitivity part (Definitely)
+1. ~~Lots of missing parameters, especially the velocity sensitivity part (Definitely)~~ Velocity sensitivity part done.
 2. Performance dump (probably)
 3. Check lead 1 and 2 compatibility (probably)
 4. Requesting patch dump from the patch directly (probably)
